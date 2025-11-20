@@ -1,0 +1,5 @@
+{
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "python.formatting.blackPath": "D:\\CodeRelated\\conda_envs\\machine-learning\\Scripts\\black.exe"
+}
