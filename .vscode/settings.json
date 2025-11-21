@@ -1,5 +1,28 @@
 {
+  "python.languageServer": "Pylance",
   "python.formatting.provider": "black",
   "editor.formatOnSave": true,
-  "python.formatting.blackPath": "D:\\CodeRelated\\conda_envs\\machine-learning\\Scripts\\black.exe"
+  "python.formatting.blackPath": "D:\\CodeRelated\\conda_envs\\machine-learning\\Scripts\\black.exe",
+  // —— 保留正常代码提示 ——
+  "editor.suggestOnTriggerCharacters": true, // 输入 . ( ) 时自动弹提示
+  "editor.parameterHints.enabled": true, // 显示函数参数提示
+  "editor.hover.enabled": true, // 鼠标悬停显示说明
+  "editor.quickSuggestions": { // 输入时显示关键字、变量等正常补全
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.suggest.showWords": true, // 显示文档内已有变量名提示
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showVariables": true,
+  // —— 关闭所有 AI 自动续写 ——（关键）
+  "editor.inlineSuggest.enabled": false, // 灰色幽灵自动写代码 → 关闭
+  "github.copilot.enable": { // Copilot 自动建议 → 关闭
+    "*": false
+  },
+  "editor.suggest.preview": false, // 去掉“模糊预览”
+  "editor.suggest.showCopilot": false, // 去掉 Copilot 项
+  "editor.suggest.showDeprecated": true // 保留正常提示
 }
