@@ -1,19 +1,23 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
       "name": "Python Debugger: Current File",
       "type": "debugpy",
       "request": "launch",
       "program": "${file}",
-      "console": "integratedTerminal", // 使用集成终端
+      "console": "integratedTerminal", // 使用集成终端，方便输入命令
       "cwd": "${workspaceFolder}", // 确保当前工作目录是项目的根目录
       "env": {
-        "PYTHONPATH": "${workspaceFolder}" // 可选：设置环境变量
+        "PYTHONPATH": "${workspaceFolder}" // 设置 PYTHONPATH 环境变量，方便找到项目模块
       },
-      "stopOnEntry": false, // 可选：是否在程序入口处暂停
-      "justMyCode": true // 可选：只调试用户编写的代码（不包括库）
+      "stopOnEntry": false, // 默认不在程序入口处暂停
+      "justMyCode": true, // 只调试用户代码
+      // "debugOptions": [
+      //   "RedirectOutput" // 可选：将标准输出和错误输出重定向到调试控制台
+      // ],
+      "envFile": "${workspaceFolder}/.env", // 可选：使用 .env 文件中的环境变量
+      "args": [] // 可选：调试时传递给程序的命令行参数（如果有）
     }
   ]
 }
