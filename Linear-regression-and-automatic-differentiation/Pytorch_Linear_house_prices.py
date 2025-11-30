@@ -83,11 +83,13 @@ scaler = StandardScaler()
 # !标准化的处理需要在训练集和测试集之间保持一致
 X_train_scaled = scaler.fit_transform(
     X_train
-)  # fit_transform() 方法是 训练数据 标准化的主要步骤。它先计算数据集的 均值（mean）和 标准差（std），然后用这些统计量对数据进行转换，将数据标准化。
+)  # fit_transform() 方法是 训练数据 标准化的主要步骤。
+# 它先计算数据集的 均值（mean）和 标准差（std），然后用这些统计量对数据进行转换，将数据标准化。
 
 X_test_scaled = scaler.transform(
     X_test
-)  # transform() 方法用于 转换测试数据（或任何新的数据），不重新计算统计量，而是使用 fit() 计算得到的统计量（均值和标准差）来转换数据。
+)  # transform() 方法用于 转换测试数据（或任何新的数据），不重新计算统计量，
+# 而是使用 fit() 计算得到的统计量（均值和标准差）来转换数据。
 
 # 将处理好的数据转换成tensor,方便后续使用
 X_train_tensor = torch.tensor(
@@ -199,7 +201,7 @@ for epoch in range(num_epochs):
         )
     # 获取当前的学习率
     current_lr = scheduler.get_last_lr()[0]
-    print("current_lr", current_lr)
+    # print("current_lr", current_lr)
     if current_lr <= 0:
         break
 
